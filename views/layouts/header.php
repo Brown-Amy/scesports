@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8"/>
 	<title>Salt City esports | About</title>
-	<!--<link href="../css/saltcity.css" type="text/css" rel="stylesheet" />-->
+	<link href="../css/saltcity.css" type="text/css" rel="stylesheet" />
 	
 </head>
 <body id="page1">

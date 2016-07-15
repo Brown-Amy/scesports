@@ -1,19 +1,19 @@
 <?php include '../views/layouts/header.php'; ?>
 <main>
-   
+   <div class="content"
     <section>
         <!-- display a table of games -->
-        <h1><Games</h1>
-        <table>
+        <h1>Games</h1>
+        <table id="gamelist">
             <tr>
-                <th>Name</th>
+                <th class="first">Name</th>
                 <th>&nbsp;</th>
                 <th>&nbsp;</th>
              
             </tr>
             <?php foreach ($games as $game) : ?>
             <tr>
-                <td><?php echo $game['name']; ?></td>
+                <td class="first"><?php echo $game['name']; ?></td>
                 
                 <td><form action="." method="post">
                     <input type="hidden" name="action"
@@ -42,5 +42,6 @@
         <p><a href="?action=add_game_form">Add Game</a></p>
               
     </section>
+    </div>
 </main>
 <?php include '../views/layouts/footer.php'; ?>

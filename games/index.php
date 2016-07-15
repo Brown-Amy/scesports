@@ -57,11 +57,10 @@
 			$id = filter_input(INPUT_POST, 'id', 
             FILTER_VALIDATE_INT);
     
-    		$name = filter_input(INPUT_POST, 'name');
-   
- 
+    		$name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
+  
 		    if ($id == NULL || $id == FALSE || $name == NULL || $name == FALSE)  {
-		        $error = "Invalid product data. Check all fields and try again.";
+		        $error = "Please enter the name of the game.";
 		    include('../errors/error.php');
 		    } else { 
 		        edit_game($id, $name);
