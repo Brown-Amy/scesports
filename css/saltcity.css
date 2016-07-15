@@ -6,7 +6,7 @@ html {
 
 body{
   height: 100%;
-	font-family: 'Source Code Pro';
+	font-family: 'Source Code Pro', sans-serif;
   width: 100%;
   margin: auto;
   /*background: #363636;*/
@@ -137,11 +137,11 @@ header nav ul{
 }
 
 header ul li:active{
-list-style-image: url(images/navicon.png);
+list-style-image: url("../images/navicon.png");
 }
 
 header ul li:hover{
-list-style-image: url(images/navicon.png); 
+list-style-image: url("../images/navicon.png"); 
 }
 
 /* Current page indicator*/
@@ -149,7 +149,7 @@ list-style-image: url(images/navicon.png);
 
 #active{
   color:#cd8d0d; 
-  list-style-image: url(images/navicon.png); 
+  list-style-image: url("../images/navicon.png"); 
 }
 
 /*Code for the main body of the page. */
@@ -372,6 +372,14 @@ main ul{
 .col2{
   width: 550px;
 }
+
+
+
+/*-----------------------------Gamelist------------------------------------- */
+#gamelist{
+  border: solid 3px #cccccc; 
+}
+
 
 
 /*----------------------------Footer--------------------------------------------*/

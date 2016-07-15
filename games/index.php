@@ -6,9 +6,27 @@
 	// include the GamesModel
 	require('../models/games_model.php');
 
-	// determine the view to load by action POST param.
-	$action = filter_input(INPUT_POST, 'action');
+	// determine the view to load by action GET param.
+	if (!empty(filter_input(INPUT_GET, 'action'))){
+		$action = filter_input(INPUT_GET, 'action');
+	}else if (!empty(filter_input(INPUT_POST, 'action'))){
+		$action = filter_input(INPUT_POST, 'action');
+	}else{
+		$action = '';
+	}
+	echo $action; ?>
+	post
+	<pre>
+		<?php print_r($_POST);
+		?>
+	</pre>
+	get
+	<pre>
+		<?php print_r($_GET);
+		?>
+	</pre>
 
+	<?php
 	switch ($action) {
 		case 'add_game':
 		  	$name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
@@ -18,6 +36,7 @@
         	include('../errors/error.php');
     		} else {
 	        add_game($name);
+	        $games = get_games();
 	        include ('../views/games/gamelist.php');
 	    	}
 	    break;
@@ -38,15 +57,15 @@
 			$id = filter_input(INPUT_POST, 'id', 
             FILTER_VALIDATE_INT);
     
-    		$name = filter_input(INPUT_POST, 'name');
-   
- 
+    		$name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
+  
 		    if ($id == NULL || $id == FALSE || $name == NULL || $name == FALSE)  {
-		        $error = "Invalid product data. Check all fields and try again.";
+		        $error = "Please enter the name of the game.";
 		    include('../errors/error.php');
 		    } else { 
 		        edit_game($id, $name);
-		        header('Location: .?action=list_games');
+		        $games = get_games();
+	        	include ('../views/games/gamelist.php');
 		    }
 		break;
 

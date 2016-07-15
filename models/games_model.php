@@ -8,14 +8,13 @@ function get_games() {
     return $statement;
 } 
 
-function add_game($id, $name) {
+function add_game($name) {
     global $db;
     $query = 'INSERT INTO games
                  (id, name)
               VALUES
-                 (:id, :name)';
+                 (null, :name)';
     $statement = $db->prepare($query);
-    $statement->bindValue(':id', $id);
     $statement->bindValue(':name', $name);
     $statement->execute();
     $statement->closeCursor();

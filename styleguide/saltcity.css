@@ -1,29 +1,34 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700);
 
+html {
+  height: 100%;
+}
+
 body{
-	font-family: 'Source Code Pro';
+  height: 100%;
+  font-family: 'Source Code Pro', sans-serif;
   width: 100%;
   margin: auto;
   /*background: #363636;*/
-  background-image: url("images/brickwall.png");
+  background-image: url("../images/brickwall.jpg");
   
   
 }
 
 h1,h2,h3,h4,h5,h6{
-	font-family: "Lucida Console", Monaco, monospace;
+  font-family: "Lucida Console", Monaco, monospace;
   font-weight: normal;
   color: #cd8d0d;
   text-transform: uppercase;
-	
+  
 }
 h1{
-	font-size: 2.75em;
+  font-size: 2.75em;
 
 }
 
 h2{
-	font-size: 2.5em;
+  font-size: 2.5em;
 
 }
 
@@ -33,18 +38,21 @@ font-size: 2em;
 }
 
 h4{
-	font-size: 1.75em;
+  font-size: 1.75em;
+  margin-top: 10px;
+  margin-bottom: 5px;
+
 
 }
 
 h5{
-	font-size: 1.5em;
+  font-size: 1.5em;
   margin: 5px;
 
 }
 
 h6{
-	font-size: 1em; 
+  font-size: 1em; 
   text-align: right;
   margin-bottom: 0px;
   text-transform: none;
@@ -101,7 +109,7 @@ text-transform: uppercase;
 }
 
 #column2 a:hover{
-  font-size: 1.2em;
+  
   color: #ffffff;
 }
 
@@ -129,11 +137,11 @@ header nav ul{
 }
 
 header ul li:active{
-list-style-image: url(images/navicon.png);
+list-style-image: url("../images/navicon.png");
 }
 
 header ul li:hover{
-list-style-image: url(images/navicon.png); 
+list-style-image: url("../images/navicon.png"); 
 }
 
 /* Current page indicator*/
@@ -141,12 +149,12 @@ list-style-image: url(images/navicon.png);
 
 #active{
   color:#cd8d0d; 
-  list-style-image: url(images/navicon.png); 
+  list-style-image: url("../images/navicon.png"); 
 }
 
 /*Code for the main body of the page. */
 .home{
-  width: 1010px;
+  width: 1070px;
   margin: auto;
   background: #363636;
   opacity: 0.9;
@@ -156,7 +164,7 @@ list-style-image: url(images/navicon.png);
 
 .leftside{
   
-  width: 600px;
+  width: 650px;
  margin-left: 20px;
   vertical-align: top;
   opacity: 0.9;
@@ -178,7 +186,7 @@ aside{
   display: inline-block;
   vertical-align: top;
   width: 300px;
-  padding: 0px 5px 0px 0px;
+  padding: 40px 5px 5px 5px;
   margin-left: 70px;
   border-left: solid 2px #2f2e2e;
   margin-right: 0px;
@@ -202,11 +210,7 @@ padding-top: 25px;
   }
 
 main{
- 
   margin: auto;
- 
-  
-
 }
 
 
@@ -223,7 +227,7 @@ figure{
 figcaption{
   background: #000000;
   width: 200px;
-  text-align: right;
+  text-align: center;
  padding-right: 5px;
   margin: auto;
   color: #cccccc;
@@ -280,8 +284,9 @@ fieldset{
   background: #000000;
   color: #ce8d0d;
   padding: 30px;
-  width: 400px;
+  width: 40px;
   border:none;
+  margin: auto;
   
 }
 input, textarea{
@@ -310,52 +315,26 @@ main ul{
 
 /*------------------------------About page------------------------------------- */
 
-.employee figcaption{
-  color: #fff;
-  background: #000000;
-  text-align: right;
-  width: 350px;
-  
-  display: block;
+.employee1 figcaption, .employee2 figcaption{
+ width: 350px;
+  text-align: center;
+  margin-left: -40px;
+
+   
 }
 
-.employee{
-  width: 400px;
+.employee1, .employee2{
+  width: 350px;
   margin: auto;
   display: inline-block;
   vertical-align: top;
-  margin: 20px;
+  padding: 50px;
 }
 .center2{
   width: 970px;
   text-align: center;
 }
-/*------------------------------Communities page------------------------------------- */
 
-/*This is for the communities page*/
-
-main article img{
-  float: left;
-  padding: 10px;
-}
-
-article{
-  clear: left;
-  padding: 20px;
-
- 
-}
-
-.content{
-  width: 970px;
-  margin: auto;
-  background: #363636;
-  opacity: 0.9;
-  padding: 10px 20px 5px 20px ;
-  margin-top: 15px;
-}
-
-/*--------------------------------------------------------------------*/
 /*------------------------------Membership page------------------------------------- */
 #col1, #col2, #col3, #col4{
   width: 225px;
@@ -364,14 +343,45 @@ article{
   
   
 }
-.button{
-  padding: 10px;
-  margin-left: 80px;
-  
+.button1{
+  margin-left: 40px;
 }
 
-  
+/*-----------------------------Coaches and Forums pages ------------------------------------- */
 
+.content{
+  width: 970px;
+  margin: auto;
+  background: #363636;
+  opacity: 0.9;
+  padding: 10px 50px 25px 50px ;
+  margin-top: 15px;
+}
+
+.button{
+  padding: 10px;
+  margin-left: 310px;
+  
+}
+.col1, .col2{
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 20px;
+}
+
+.col2{
+  width: 550px;
+}
+
+
+
+/*-----------------------------Gamelist------------------------------------- */
+#gamelist{
+  border: solid 2px #cccccc; 
+ 
+}
+
+/*----------------------------Footer--------------------------------------------*/
 footer{
   background: #000000;
   padding: 1px;
