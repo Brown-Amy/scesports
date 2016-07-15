@@ -1,8 +1,8 @@
 <?php include '../views/layouts/header.php'; ?>
 <main>
     <h1>Edit Game</h1>
-    <form action="index.php" method="post" id="edit_game_form">
-        <input type="hidden" name="action" value="edit_game">
+    <form action="." method="post" id="edit_game">
+      	<input type='hidden' name='action' value='edit_game'>
         <input type="hidden" name="id" value="<?php echo $id; ?>"><br>
         
       
