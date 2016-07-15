@@ -1,0 +1,329 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700);
+
+/* --------------------------------------------- */
+/* --------- Branding: Color Palette ----------- */
+/* --------------------------------------------- */
+/* These are the colors of the boxes under the Branding section */
+#swatch1{
+	background-color: #000000;
+}	
+#swatch2{
+	background-color: #ffffff;
+}	
+#swatch3{
+	background-color: #ce8d0d;
+}	
+#swatch4{
+	background-color: #3f3f3f;
+}		
+
+/* ----------------------------------------------------- */
+/* --------- Typography: Heading & Body Copy ----------- */
+/* ----------------------------------------------------- */
+/* These are the font families of all the headings and body copy */
+
+body{
+	font-family: 'Source Code Pro';
+	background: #363636;
+	
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family: "Lucida Console", Monaco, monospace;
+	
+}
+
+
+
+/* -------------------------------------------------- */
+/* --------- Navigation: Main & Secondary ----------- */
+/* -------------------------------------------------- */
+/* Colors, style, floating, shapes, etc of main & secondary navs */
+
+/* Main Navigation Style */
+#mainnav{
+	background: #000000;
+	padding: 1px;
+	
+	
+}
+#mainnav ul{
+	padding: 0px;
+  text-align: center;
+	background: #000000;
+	
+}
+#mainnav li{
+	list-style: none;
+
+}
+#mainnav a:link{
+	color: #cd8d0d;
+	text-transform: uppercase;
+	text-decoration: none;
+	margin: 8px;
+	letter-spacing: .1em;
+	font-size: 1.09em;
+	/* other styles */
+}
+#mainnav a:visited{
+	color: #fff;
+	/* other styles */
+}
+#mainnav a:hover{
+	color: #cd8d0d;
+
+	
+	/* other styles */
+}
+
+#mainnav ul li:hover{
+  list-style-image: url(images/navicon.png); 
+}
+#mainnav a:active{
+	color: #cd8d0d;
+	border-left: 5px solid #cd8d0d;
+	list-style-image: url(images/navicon.png); 
+	/* other styles */
+}
+
+
+/* Secondary Navigation Style */
+#secondnav{
+	background: #000000;
+	padding: 10px;
+
+}
+#secondnav ul{
+	padding: 0px;
+  background: #000000;
+}
+#secondnav li{
+display: inline;
+}
+#secondnav a:link{
+	color: #cd8d0d;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 5px;
+	margin: 8px 50px 0 0 ;
+	font-weight: 200;
+	font-size: 1em;
+	/* other styles */
+}
+#secondnav a:visited{
+	color: #3f3f3f;
+	/* other styles */
+}
+#secondnav a:hover{
+	color: #cd8d0d;
+	border-bottom: 5px solid #cd8d0d;
+	/* other styles */
+}
+#secondnav a:active{
+	color: #ffffff;
+	/* other styles */
+}
+
+
+
+
+/* ----------------------------------- */
+/* --------- HTML Elements ----------- */
+/* ----------------------------------- */
+/* Styling for all HTML Elements */
+
+
+/* True for all headings */
+h1, h2, h3 ,h4, h5, h6{
+	color: #cd8d0d;
+	font-weight: 600;
+	padding: .1em;
+	margin: .2em 0;
+}
+
+
+/* Style for individual headings */
+h1{
+	font-size: 2.75em;
+
+}
+
+h2{
+	font-size: 2.5em;
+
+}
+
+h3{
+font-size: 2em;
+}
+
+h4{
+	font-size: 1.75em;
+
+}
+
+h5{
+	font-size: 1.5em;
+
+}
+
+h6{
+	font-size: 1em; 
+
+}
+
+
+/* List Styles */
+ul{
+font-size: 1.3em;
+	background: #363636;
+}
+ul li{
+	
+	color: #ffffff;
+	
+
+}
+
+ol{
+	font-size: 1.3em;
+
+}
+ol li{
+
+}
+
+
+/* Non-Navigational Link Styles */
+/* This is for all default links on your page */
+a:link{
+	font-weight: 600;
+	font-size: 1.2em;
+	
+	text-decoration: none;
+	letter-spacing: 1px;
+	color: #cd8d0d;
+
+}
+a:visited{
+	color: #fff;
+
+}
+a:hover{
+color: #cd8d0d;
+	text-decoration: underline;
+	text-transform: uppercase;
+}
+a:active{
+	color: #3f3f3f;
+
+}
+
+/* This is for secondary link styles (possibly in your footer, etc) */
+.linkstyle2 a:link{
+
+}
+.linkstyle2 a:visited{
+
+}
+.linkstyle2 a:hover{
+
+}
+.linkstyle2 a:active{
+
+}
+
+
+/* Paragraph Styles */
+p {
+	color: #fff;
+	text-align: justify;
+	font-size: 1em;
+	
+	
+	
+	/* Other paragraph styles */
+	
+}
+
+
+/* Figure and Figcaption Styles */
+figure{
+text-align: center;
+	width: 120px;
+}
+
+figcaption{
+	 background: #000000;
+  width: 200px;
+  text-align: center;
+ padding-right: 5px;
+  margin: auto;
+  color: #cccccc;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------- */
+/* --------- Style Guide CSS ----------- */
+/* ------------------------------------- */
+/* The following CSS is used for the styling of the structure of the Style Guide itself */
+body{
+	width: 700px;
+	margin: 10px auto;
+	border: 1px solid #777;
+	padding: 20px;
+}
+
+.styleguide{
+	font-family: "Courier New", Courier, monospace;
+}
+h1.styleguide, h2.styleguide, h3.styleguide, h4.styleguide, h5.styleguide, h6.styleguide{
+	color: #777;
+	font-family: "Courier New", Courier, monospace;
+}
+h2.styleguide{
+    background-color: #777;
+    border-radius: 15px;
+    padding: 15px;
+    margin-left: -15px;
+    color: white;
+}
+p.styleguide{
+	color: #777;
+	font-family: "Courier New", Courier, monospace;
+}
+
+section{
+    margin-top: -10px;
+    margin-bottom: 70px; 
+}
+.colorgroup{
+    float: left;
+    width: 170px;
+}
+.colorgroup h4{
+	font-size: .9em;
+}
+.colorgroup p{
+    font-size: .8em;
+}
+.clear{
+    clear: both;
+}
+.swatches{
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}

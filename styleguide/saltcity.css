@@ -1,0 +1,424 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700);
+
+body{
+	font-family: 'Source Code Pro';
+  width: 100%;
+  margin: auto;
+  /*background: #363636;*/
+  background-image: url("images/brickwall.png");
+  
+  
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family: "Lucida Console", Monaco, monospace;
+  font-weight: normal;
+  color: #cd8d0d;
+  text-transform: uppercase;
+	
+}
+h1{
+	font-size: 2.75em;
+
+}
+
+h2{
+	font-size: 2.5em;
+
+}
+
+h3{
+font-size: 2em;
+  margin: 3px;
+}
+
+h4{
+	font-size: 1.75em;
+
+}
+
+h5{
+	font-size: 1.5em;
+  margin: 5px;
+
+}
+
+h6{
+	font-size: 1em; 
+  text-align: right;
+  margin-bottom: 0px;
+  text-transform: none;
+
+}
+/*Code for the header and main navigation of the page. */
+
+.opening{
+  text-align: center;
+  
+}
+
+header{
+  background: #000000;
+  padding: 1px;
+  height: 230px;
+}
+
+header img{
+  float: left;
+  position: absolute;
+  left: 0px;
+  
+}
+
+header nav{
+text-transform: uppercase;
+  margin-top: 20px;
+  margin-left: 200px;
+}
+
+
+
+
+#column1{
+  display: inline-block;
+  margin-top: 15px;
+  width: 55%;
+  
+}
+
+#column2{
+  display: inline-block; 
+  position: absolute;
+  right: 30px;
+  margin-top: 150px;
+  text-align: right;
+}
+
+#column2 a{
+  font-size: 1em;
+  color: #cd8d0d;
+
+}
+
+#column2 a:hover{
+  font-size: 1.2em;
+  color: #ffffff;
+}
+
+header a{
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.3em;
+}
+
+header a:hover{
+  color: #cd8d0d;
+  font-size: 1.3em;
+}
+
+/*header a:visited{
+  color: #cccccc;
+}*/
+
+header a:active{
+  color: #cd8d0d;
+}
+
+header nav ul{
+  width: 150px;
+}
+
+header ul li:active{
+list-style-image: url(images/navicon.png);
+}
+
+header ul li:hover{
+list-style-image: url(images/navicon.png); 
+}
+
+/* Current page indicator*/
+
+
+#active{
+  color:#cd8d0d; 
+  list-style-image: url(images/navicon.png); 
+}
+
+/*Code for the main body of the page. */
+.home{
+  width: 1010px;
+  margin: auto;
+  background: #363636;
+  opacity: 0.9;
+  padding-bottom: 40px;
+  margin-top: 50px;
+}
+
+.leftside{
+  
+  width: 600px;
+ margin-left: 20px;
+  vertical-align: top;
+  opacity: 0.9;
+  text-align: center;
+  display: inline-block;
+  
+}
+
+.leftside img{
+  margin-left: 30px;
+}
+.leftside h1{
+  width: 500px;
+  margin: auto;
+  padding-left: 40px;
+}
+
+aside{
+  display: inline-block;
+  vertical-align: top;
+  width: 300px;
+  padding: 0px 5px 0px 0px;
+  margin-left: 70px;
+  border-left: solid 2px #2f2e2e;
+  margin-right: 0px;
+  
+}
+aside figcaption{
+  width: 200px;
+}
+.media{
+  padding: 20px 20px 30px;
+  text-align: center;
+  border-bottom: solid 2px #2f2e2e;
+}
+.media img{
+  padding: 8px;
+}
+
+aside h5{
+padding-top: 25px;
+  padding-bottom: 20px;
+  }
+
+main{
+ 
+  margin: auto;
+ 
+  
+
+}
+
+
+
+section{
+  margin-top: 80px;
+}
+figure{
+  display: block;
+ text-align: center;
+}
+
+
+figcaption{
+  background: #000000;
+  width: 200px;
+  text-align: right;
+ padding-right: 5px;
+  margin: auto;
+  color: #cccccc;
+ 
+}
+.full figcaption{
+  width: 500px;
+ 
+}
+main a{
+color: #cd8d0d;
+text-decoration: none;
+}
+
+main a:hover{
+text-transform: uppercase;
+border-bottom: solid 2px #cd8d0d;
+}
+
+p{
+  color: #ffffff;
+  text-align: justify;
+}
+
+/* Styling for the calendar data on the home page */
+table{
+  border: solid 2px #cccccc; 
+  margin-bottom: 25px;
+  
+}
+
+.first{
+  border-left: none;
+}
+
+th{
+color: #cd8d0d;
+text-transform: uppercase;
+  font-weight: normal;
+  border-bottom: solid 1px #ffffff; 
+  border-left: solid 1px #ffffff;
+}
+
+td{
+padding: 5px;
+  text-align: center;
+  border-left: solid 1px #ffffff;
+  color: #ffffff;
+}
+
+/* Styling for the form on the contact page */
+
+fieldset{
+  background: #000000;
+  color: #ce8d0d;
+  padding: 30px;
+  width: 400px;
+  border:none;
+  
+}
+input, textarea{
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+form{
+  padding: 10px
+}
+legend{
+  display: none;
+}
+
+#button{
+  color: #000000;
+  background: #ce8d0d;
+  text-transform: uppercase;
+  font-family: "Lucida Console", Monaco, monospace; 
+}
+/*------------------------------Open Play page------------------------------------- */
+
+main ul{
+  color: #ffffff;
+}
+
+/*------------------------------About page------------------------------------- */
+
+.employee figcaption{
+  color: #fff;
+  background: #000000;
+  text-align: right;
+  width: 350px;
+  
+  display: block;
+}
+
+.employee{
+  width: 400px;
+  margin: auto;
+  display: inline-block;
+  vertical-align: top;
+  margin: 20px;
+}
+.center2{
+  width: 970px;
+  text-align: center;
+}
+/*------------------------------Communities page------------------------------------- */
+
+/*This is for the communities page*/
+
+main article img{
+  float: left;
+  padding: 10px;
+}
+
+article{
+  clear: left;
+  padding: 20px;
+
+ 
+}
+
+.content{
+  width: 970px;
+  margin: auto;
+  background: #363636;
+  opacity: 0.9;
+  padding: 10px 20px 5px 20px ;
+  margin-top: 15px;
+}
+
+/*--------------------------------------------------------------------*/
+/*------------------------------Membership page------------------------------------- */
+#col1, #col2, #col3, #col4{
+  width: 225px;
+  display: inline-block;
+  vertical-align: top;
+  
+  
+}
+.button{
+  padding: 10px;
+  margin-left: 80px;
+  
+}
+
+  
+
+footer{
+  background: #000000;
+  padding: 1px;
+  margin-top: 50px;
+}
+
+.center{
+  width: 1050px;
+  margin: auto;
+  text-align: center;
+}
+
+
+footer a{
+  text-decoration: none;
+  color: #cccccc; 
+  text-transform: uppercase;
+}
+
+footer a:hover{
+  color: #cd8d0d;
+  border-bottom: solid 3px #cd8d0d;
+
+}
+
+footer a:active{
+  color: #ce8d0d;
+  
+}
+
+footer p{
+  text-align: center;
+  color: #cccccc; 
+}
+
+footer li{
+ display: inline;
+  padding: 25px;
+  
+}
+
+#footeractive a{
+  color: #ce8d0d;
+  
+ 
+}
+
+footer{
+  clear: left;
+}

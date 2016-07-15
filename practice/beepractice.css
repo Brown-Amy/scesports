@@ -1,0 +1,161 @@
+/*This sets the headers to all have Arial Black font*/
+
+h1, h2, h3, h4, h5, h6{
+  font-family: "Arial Black", Gadget, sans-serif;
+}
+
+
+/* This controls the body Sets the width of the page and centers it in the browser */
+
+body{
+
+  width: 900px;
+	
+	margin: auto;
+	
+
+
+}
+
+/*This code sets up the header navigation*/
+
+header nav ul{
+  
+  width: 20px;
+  
+  background-color: #f2cc0f;
+  height: 200px;
+  border: 2px solid #aa974a;
+  padding-top: 45px;
+  
+  
+}
+
+header nav li{
+  background-color: #aa974a;
+  font-weight: bold;
+  width: 220px;
+  padding: 6px;
+  padding-left: 8px;
+  margin-left: -5px;
+  margin-bottom: 8px;
+  box-shadow: 3px 3px 3px;
+  
+}
+
+header {
+  margin-top: 20px;  
+}
+
+/* this code changes the h1 tag "a beekeeping resource" */
+
+header h1{
+  text-transform: capitalize;
+  
+  font-size: 130%;
+  
+  color: #aa974a;
+  
+  letter-spacing: .4em;
+  
+  margin-top: -30px;
+  
+  
+}
+
+/* This code is to set the main background color size and spacing. */
+
+main{
+  
+  background: #f6d70b;
+  
+  padding: 30px;
+  
+  border: 2px solid #aa974a;
+}
+
+/*This code sets up the section inside the main for the text.  */
+
+section{
+  background: #fafcca;
+  border: 1px solid #aa974a;
+  padding: 10px 30px;
+  margin: 20px 10px; 
+}
+
+/*This code will set up the navigation link colors and styles */
+
+header nav a{
+  text-decoration: none;
+  
+}
+
+header nav a:link{
+  color: #f4f79c; 
+}
+header nav a:visited{
+  color: #f4f79c;
+}
+
+header nav a:hover{
+  color: #eacd05;
+}
+
+footer nav a hover{
+  color: #eacd05;
+}
+
+nav a active{
+  color: #ffffff;
+}
+
+nav ul{
+  list-style: none;
+}
+
+/*This code is to adujst the border around "bees" and give it round corners.  */
+
+h2{
+  width: 60px;
+  font-size: 20px;
+  color: #aa974a;
+  padding: 10px;
+  border-radius: 80px 80px 0px 80px;
+  background: #ffffff;
+  border: 1px solid #aa974a;
+  
+}
+
+/*This code is for the footer. adjusting the nav bar and changing the background color */
+
+footer{
+  color: #fafcca;
+  text-align: center;
+  background: #aa974a;
+  padding-top: 1px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+footer nav ul{
+  padding: 1px;
+  
+}
+
+footer nav li{
+  display: inline;
+  padding-right: 15px;
+  font-weight: bold;
+}
+
+footer nav a{
+  color: #fafcca;
+  font-size: .9em;
+ 
+}
+
+footer nav a:hover{
+  color: #f6d70b;
+}

@@ -1,0 +1,132 @@
+/*center the webpage in the browser and ensure that it won't shrink less than 870px */
+body{
+  width: 100%;
+  min-width: 870px;
+  margin: 0;
+ font-family: "Arial Black", sans-serif;
+}
+
+header{
+ background: #f2cc10;
+ background-image: url("images/comb.jpg");
+ padding: 1px;
+ text-align: center;
+}
+
+.center{
+  width: 50%;
+  margin: auto;
+}
+
+h1{
+ font-size: 1em;
+  color: #87752d;
+  font-weight: normal;
+  margin-top: -5px;
+  font-family: arial;
+
+}
+
+#topbg {
+  background: #52471b;
+  height: 80px;
+  border-bottom: 5px solid #87752d;
+  width: 100%;
+  
+}
+
+section{
+  background: #f8ffb0;
+  text-align: center;
+  padding-top: 70px;
+  
+  /*Changing this margin to a negative eliminates the gap between section and the nav bar but it hides the box shadow.  */
+ margin-top: -15px;
+ 
+}
+
+nav ul{
+  background: #87752d;
+  border-top: solid 2px #52471b;
+  border-bottom: solid 2px #52471b;
+  box-shadow: 0px 2px 5px #52471b;
+  text-align: center;
+  padding: 5px;
+  margin-top: 0px;
+  position: relative;
+ 
+ 
+  
+
+}
+
+header img{
+  margin-top: -50px;
+}
+
+nav li{
+  /*border: solid 2px blue;*/
+  display: inline;
+  padding-left: 20px;
+  
+}
+
+a{
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:link{
+  color: #f8ffb0;
+}
+a:visited{
+  color: #f8ffb0;
+}
+
+a:hover{
+  color: #fffc58;
+}
+
+a:active{
+  color: #ffffff;
+}
+
+figure {
+  display: inline-block;
+  margin: 3px;
+  background: #87752d;
+  padding: 5px;
+  border-radius: 5px;
+ 
+}
+
+figcaption{
+  color: #f8ffb0;
+   
+}
+
+blockquote{
+  color: #52471b;
+  font-weight: bold;
+  font-size: 1.5em;
+  width: 550px;
+  margin: auto;
+  padding-top: 30px;
+  padding-bottom: 100px;
+  font-style: italic;
+  font-family: arial, sans-serif;
+}
+
+footer{
+  background: #52471b;
+  color: #f2cc10;
+  text-align: center;
+  font-family: "Myraid Pro", sans-serif;
+  font-weight: bold;
+  padding: 40px;
+  border-top: 5px solid #87752d;
+  
+}
+footer p{
+  margin: 0px;
+}
