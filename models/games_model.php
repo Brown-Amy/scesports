@@ -26,10 +26,11 @@ function edit_game($id, $name) {
                 WHERE id = :id";
             
         $statement = $db->prepare($query);
-        $statement->bindValue(':name', $name);
-        $statement->bindValue(':id', $id);
+        $statement->bindParam(':name', $name);
+        $statement->bindParam(':id', $id);
         $statement->execute();
         $statement->closeCursor();
+        $statement->debugDumpParams();
     
 }
 function delete_game($id) {
