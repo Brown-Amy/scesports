@@ -15,14 +15,7 @@
             <tr>
                 <td class="first"><?php echo $game['name']; ?></td>
                 
-                <td><form action="." method="post">
-                    <input type="hidden" name="action"
-                           value="delete_game">
-                    <input type="hidden" name="id"
-                           value="<?php echo $game['id']; ?>">
-                  
-                    <input type="submit" value="Delete">
-                </form></td>
+                
                  <td><form action="." method="post">
                           <input type="hidden" name="action"
                            value="show_edit_form">
@@ -35,6 +28,14 @@
                            value="<?php echo $game['id']; ?>">
                     
                     <input type="submit" value="Edit">
+                </form></td>
+                <td><form action="." method="post">
+                    <input type="hidden" name="action"
+                           value="delete_game">
+                    <input type="hidden" name="id"
+                           value="<?php echo $game['id']; ?>">
+                  
+                    <input type="submit" value="Delete">
                 </form></td>
             </tr>
             <?php endforeach; ?>
