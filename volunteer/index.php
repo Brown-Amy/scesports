@@ -18,7 +18,7 @@
 	}
 
 	switch ($action) {
-		case 'add':
+		case 'add_parent':
 		$id = null;
 		$first_name = filter_input(INPUT_POST, 'first_name', FILTER_SANITIZE_STRING);
 		$last_name = filter_input(INPUT_POST, 'last_name', FILTER_SANITIZE_STRING);
@@ -40,7 +40,18 @@
 
 			break;
 
-		case 'edit':
+			case 'list_parents':
+    		$parent = get_parents();
+    		print_r ($parent);
+			$name = $first_name . ' ' . $last_name;
+
+			if (isset($mentor)) {
+            	$mentor_request = 'Yes';
+    		} else if (!isset($mentor)){
+           		 $mentor_request = 'No';
+    		}
+    		include ('../views/volunteer/parentlist.php');
+//Trying to figure out how to display the parent information to the administrator view. 
 			break;
 
 		case 'delete':
@@ -56,4 +67,3 @@
 			include('../views/volunteer/register.php');
 			break;
 	}
-?>

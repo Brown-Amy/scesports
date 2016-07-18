@@ -1,4 +1,3 @@
-confirmation.php
 <?php include('../views/layouts/header.php'); ?>
 <main>
 	<div class="content">
