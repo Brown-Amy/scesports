@@ -22,7 +22,7 @@ function add_game($name) {
 function edit_game($id, $name) {
     global $db;
       $query = "UPDATE games
-                SET name = :name,
+                SET name = :name
                 WHERE id = :id";
             
         $statement = $db->prepare($query);

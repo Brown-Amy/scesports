@@ -6,7 +6,7 @@
                 <p class="error"><?php echo $error_message; ?></p>
             <?php } // end if ?>
             <form action="." method="post">
-                <input type="hidden" name="action" value="add">
+                <input type="hidden" name="action" value="add_parent">
                 <div id="data">
                     <label>First Name:</label>
                     <input type="text" name="first_name">

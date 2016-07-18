@@ -5,7 +5,7 @@
         $username = 'root';
         $password = '';
     }else{
-        $dsn = 'mysql:host=localhost;dbname=herecon1_guitar1';
+        $dsn = 'mysql:host=localhost;dbname=herecon1_scesports';
         $username = 'herecon1_iClient';
         $password = '-)&(C!DzI.5G';
     }

@@ -7,14 +7,25 @@
         <table id="gamelist">
             <tr>
                 <th class="first">Name</th>
-                <th>&nbsp;</th>
-                <th>&nbsp;</th>
-             
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>Child Name</th>
+                <th>Game</th>
+                <th>Mentor</th>
+                <th>Comments</th>
+
             </tr>
-            <?php foreach ($games as $game) : ?>
+            <?php foreach ($parents as $parent) : ?>
             <tr>
-                <td class="first"><?php echo $game['name']; ?></td>
-                
+                <td class="first"><?php echo $parent['first_name']; ?></td>
+                <td><?php echo $parent['last_name']; ?></td>
+
+                <td><?php echo $parent['email']; ?></td>
+                <td><?php echo $parent['phone']; ?></td>
+                <td><?php echo $parent['child_name']; ?></td>
+                <td><?php echo $mentor_request; ?></td>
+                <td><?php echo $parent['game']; ?></td>
+                <td><?php echo $parent['comments']; ?></td>
                 
                  <td><form action="." method="post">
                           <input type="hidden" name="action"
@@ -41,7 +52,7 @@
             <?php endforeach; ?>
         </table>
         <p><a href="?action=add_game_form">Add Game</a></p>
-        <p><a href="?action=list_parents">View Parents</a></p>      
+              
     </section>
     </div>
 </main>

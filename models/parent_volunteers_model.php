@@ -20,6 +20,15 @@ function get_parent($id) {
     return $parent;
 }
 
+function get_parents() {
+    global $db;
+    $query = 'SELECT * FROM parents
+              ORDER BY `id`';
+    $statement = $db->prepare($query);
+    $statement->execute();
+    return $statement;
+} 
+
 function delete_volunteer($id) {
     global $db;
     $query = 'DELETE FROM parents_volunteers
