@@ -1,4 +1,4 @@
-<?php 
+<?php
 function get_games() {
     global $db;
     $query = 'SELECT * FROM games
@@ -6,7 +6,7 @@ function get_games() {
     $statement = $db->prepare($query);
     $statement->execute();
     return $statement;
-} 
+}
 
 function add_game($name) {
     global $db;
@@ -24,14 +24,12 @@ function edit_game($id, $name) {
       $query = "UPDATE games
                 SET name = :name
                 WHERE id = :id";
-            
+
         $statement = $db->prepare($query);
         $statement->bindParam(':name', $name);
         $statement->bindParam(':id', $id);
         $statement->execute();
         $statement->closeCursor();
-        $statement->debugDumpParams();
-    
 }
 function delete_game($id) {
     global $db;

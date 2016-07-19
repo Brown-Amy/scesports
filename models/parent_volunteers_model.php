@@ -1,4 +1,4 @@
-<?php 
+<?php
 function get_volunteers() {
     global $db;
     $query = 'SELECT * FROM parents_volunteers
@@ -7,7 +7,7 @@ function get_volunteers() {
     $statement->execute();
     $volunteers = $statement->fetchAll();
     return $volunteers;
-} 
+}
 function get_parent($id) {
     global $db;
     $query = 'SELECT * FROM parents
@@ -22,14 +22,29 @@ function get_parent($id) {
 
 function get_parents() {
     global $db;
-    $query = 'SELECT * FROM parents
-    		  JOIN games
-    		  ON parents.game = games.id;
-              ORDER BY `id`';
+    // $query = 'SELECT * FROM parents
+    // 		  JOIN games
+    // 		  ON parents.game = games.id;
+    //           ORDER BY `id`';
+    $query = 'SELECT
+            parent.id as id,
+            parent.first_name as first_name,
+            parent.last_name as last_name,
+            CONCAT(parent.first_name, " ", parent.last_name) as full_name,
+            parent.email as email,
+            parent.phone as phone,
+            parent.child_name as child_name,
+            parent.mentor as mentor,
+            parent.comment as comment,
+            game.name as game_name
+        FROM parents as parent
+        JOIN games as game
+        ON parent.game = game.id
+        ORDER BY parent.id;';
     $statement = $db->prepare($query);
     $statement->execute();
     return $statement;
-} 
+}
 
 function delete_parent($id) {
     global $db;
@@ -54,7 +69,7 @@ function add_parent($id, $first_name, $last_name, $email, $phone, $child_name, $
     $statement->bindValue(':email', $email);
     $statement->bindValue(':phone', $phone);
     $statement->bindValue(':child_name', $child_name);
-    $statement->bindValue(':game', $game); 
+    $statement->bindValue(':game', $game);
     $statement->bindValue(':mentor', $mentor);
     $statement->bindValue(':comment', $comment);
     $statement->execute();
@@ -81,11 +96,11 @@ function edit_parent($id, $first_name, $last_name, $email, $phone, $child_name, 
 	    $statement->bindValue(':email', $email);
 	    $statement->bindValue(':phone', $phone);
 	    $statement->bindValue(':child_name', $child_name);
-	    $statement->bindValue(':game', $game); 
+	    $statement->bindValue(':game', $game);
 	    $statement->bindValue(':mentor', $mentor);
 	    $statement->bindValue(':comment', $comment);
         $statement->execute();
         $statement->closeCursor();
-    
+
 }
 ?>
