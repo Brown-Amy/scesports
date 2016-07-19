@@ -23,13 +23,15 @@ function get_parent($id) {
 function get_parents() {
     global $db;
     $query = 'SELECT * FROM parents
+    		  JOIN games
+    		  ON parents.game = games.id;
               ORDER BY `id`';
     $statement = $db->prepare($query);
     $statement->execute();
     return $statement;
 } 
 
-function delete_volunteer($id) {
+function delete_parent($id) {
     global $db;
     $query = 'DELETE FROM parents_volunteers
               WHERE id = :id';
@@ -59,23 +61,29 @@ function add_parent($id, $first_name, $last_name, $email, $phone, $child_name, $
     $statement->closeCursor();
 }
 
-function edit_product($category_id, $code, $name, $price, $productID) {
+function edit_parent($id, $first_name, $last_name, $email, $phone, $child_name, $game, $mentor, $comment) {
     global $db;
-      $query = "UPDATE products
-                SET categoryID = :category_id,
-                    productCode = :code,
-                    productName = :name,
-                    listPrice = :price
-                WHERE productID = :productID";
-             
+      $query = "UPDATE parents
+                SET first_name = :first_name,
+                    last_name = :last_name,
+                    email = :email,
+                    phone = :phone,
+                    child_name = :child_name,
+                    game = :game,
+                    mentor = :mentor,
+                    comment = :comment
+                WHERE id = :id";
 
-      
         $statement = $db->prepare($query);
-        $statement->bindValue(':category_id', $category_id);
-        $statement->bindValue(':code', $code);
-        $statement->bindValue(':name', $name);
-        $statement->bindValue(':price', $price);
-        $statement->bindValue(':productID', $productID);
+        $statement->bindValue(':id', $id);
+	    $statement->bindValue(':first_name', $first_name);
+	    $statement->bindValue(':last_name', $last_name);
+	    $statement->bindValue(':email', $email);
+	    $statement->bindValue(':phone', $phone);
+	    $statement->bindValue(':child_name', $child_name);
+	    $statement->bindValue(':game', $game); 
+	    $statement->bindValue(':mentor', $mentor);
+	    $statement->bindValue(':comment', $comment);
         $statement->execute();
         $statement->closeCursor();
     
