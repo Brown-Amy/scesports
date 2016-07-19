@@ -44,7 +44,7 @@
         <br>
     </form>
     <p class="last_paragraph">
-        <a href="index.php?action=list_games">View Game List</a>
+        <a href="index.php?action=list_parents">Cancel</a>
     </p>
 	</div>
 </main>

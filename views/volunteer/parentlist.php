@@ -13,7 +13,7 @@
                 <th>Phone Number</th>
                 <th>Child Name</th>
                 <th>Mentor</th>
-                <th>Game</th>
+                <th>Interested Game</th>
                 <th>Comments</th>
                 <th>&nbsp;</th>
                 <th>&nbsp;</th>
@@ -41,12 +41,12 @@
 
                     <input type="submit" value="Edit">
                 </form></td>
+
                 <td><form action="." method="post">
                     <input type="hidden" name="action"
                            value="delete_parent">
                     <input type="hidden" name="id"
                            value="<?php echo $parent['id']; ?>">
-
                     <input type="submit" value="Delete">
                 </form></td>
             </tr>
