@@ -33,7 +33,7 @@ function get_parents() {
 
 function delete_parent($id) {
     global $db;
-    $query = 'DELETE FROM parents_volunteers
+    $query = 'DELETE FROM parents
               WHERE id = :id';
     $statement = $db->prepare($query);
     $statement->bindValue(':id', $id);
