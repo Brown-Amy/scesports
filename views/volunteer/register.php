@@ -27,8 +27,8 @@
                     <label>Child's Name:</label>
                     <input type="text" name="child_name">
                     <br>
-
-                    <input type="checkbox" name="mentor"> I would like a staff mentor. <br>
+                    
+                    <input type="checkbox" name="mentor" value="1"> I would like a staff mentor. <br>
                     
                     <label>Interested Games:</label>
                     <select name="game">
