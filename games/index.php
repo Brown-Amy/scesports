@@ -81,8 +81,19 @@
     	break;
 
     	case 'assign_parent':
-    		$parents = get_parents();
-    		$games = get_games();
+			$parent_volunteer_id = filter_input(INPUT_POST, 'parent_id', 
+            FILTER_VALIDATE_INT);
+            $game_id = filter_input(INPUT_POST, 'game_id', 
+            FILTER_VALIDATE_INT);
+            if ($game_id == NULL || $game_id == FALSE || $parent_volunteer_id == NULL || $parent_volunteer_id == FALSE){
+            $error = "Please select a game";
+            include('../errors/error.php');
+            }else {
+            assign_parent($parent_volunteer_id, $game_id);
+            $parents = get_parents();
+            $games = get_games();
+            include ('../views/games/gamelist.php');
+            }
 		
 		default:
 			// query the table for all the games
