@@ -1,7 +1,7 @@
 <?php include('../views/layouts/header.php'); ?>
     <main>
         <div class="content">
-            <h1>Volunteer Registration</h1>
+            <h1>Parent Registration</h1>
             <?php if (!empty($error_message)) { ?>
                 <p class="error"><?php echo $error_message; ?></p>
             <?php } // end if ?>
@@ -28,9 +28,9 @@
                     <input type="text" name="child_name">
                     <br>
                     
-                    <input type="checkbox" name="mentor" value="1"> I would like a staff mentor. <br>
+                    <input type="checkbox" name="mentor" value="1"> I would like to be a staff mentor. <br>
                     
-                    <label>Interested Games:</label>
+                    <label>Interested Game:</label>
                     <select name="game">
                          
                             <?php foreach ($games as $game) : ?>
@@ -42,13 +42,12 @@
                     <textarea name='comment' rows='4' cols='50'>Additional Comments</textarea><br>                   
                 
                 </div>
-
                 <div id="buttons">
                     <label>&nbsp;</label>
-                    <input type="submit" value="Register"/><br>
+                    <input type="submit" value="Register"/>
                 </div>
-
             </form>
+            
         </div>
     </main>
 <?php include('../views/layouts/footer.php');?>

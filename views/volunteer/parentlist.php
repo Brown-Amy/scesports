@@ -17,6 +17,8 @@
                 <th>Comments</th>
                 <th>&nbsp;</th>
                 <th>&nbsp;</th>
+                <th>Assign a game</th>
+
 
             </tr>
             <?php foreach ($parents as $parent) : ?>
@@ -49,6 +51,25 @@
                            value="<?php echo $parent['id']; ?>">
                     <input type="submit" value="Delete">
                 </form></td>
+
+                <td>
+                    <select name="game">
+                            <option>Select a game.</option>
+                            <?php foreach ($games as $game) : ?>
+                
+                            <option value="<?php echo $game['id']; ?>"><?php echo $game['name']; ?></option>
+                            <?php endforeach; ?>
+                    </select><br>
+                    <form action="." method="post">
+                    <input type="hidden" name="action"
+                           value="assign_game">
+                    <input type="hidden" name="parent_id"
+                           value="<?php echo $parent['id']; ?>">
+                    <input type="hidden" name="game_id"
+                           value="<?php echo $game['id']; 'selected' ?>">       
+                    <input type="submit" value="Assign">
+                    </form>
+                </td>
             </tr>
             <?php endforeach; ?>
         </table>

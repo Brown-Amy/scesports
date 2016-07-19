@@ -45,6 +45,7 @@
 
 			case 'list_parents':
     		$parents = get_parents();
+    		$games = get_games();
     		include ('../views/volunteer/parentlist.php');
 			break;
 
@@ -65,7 +66,7 @@
 		$id = filter_input(INPUT_POST, 'id', 
             FILTER_VALIDATE_INT);
 		$parent = get_parent($id);
-		print_r($parent);
+		//print_r($parent);
 		$games =get_games();
 		include ('../views/volunteer/edit_parent.php');
 		break;
@@ -90,19 +91,37 @@
         	include('../errors/error.php');
     		} else {
 	        edit_parent($id, $first_name, $last_name, $email, $phone, $child_name, $game, $mentor, $comment);
+	        $parents = get_parents();
 	        include ('../views/volunteer/parentlist.php');
 	    	}
 
 			break;
 
 			case 'list_parents':
+    		$games = get_games();
     		$parents = get_parents();
     		include ('../views/volunteer/parentlist.php');
 			break;
 
+			case 'assign_game':
+			$parent_volunteer_id = filter_input(INPUT_POST, 'parent_id', 
+            FILTER_VALIDATE_INT);
+            $game_id = filter_input(INPUT_POST, 'game_id', 
+            FILTER_VALIDATE_INT);
+            if ($game_id == NULL || $game_id == FALSE || $parent_volunteer_id == NULL || $parent_volunteer_id == FALSE){
+            $error = "Please select a game";
+            include('../errors/error.php');
+            }else {
+            assign_game($parent_volunteer_id, $game_id);
+            $parents = get_parents();
+            $games = get_games();
+            include ('../views/volunteer/parentlist.php');
+            }
+
 		default:
 			// query the table for all the games
 			$games = get_games();
+			$parents = get_parents();
 			// load the register view
 			include('../views/volunteer/register.php');
 			break;

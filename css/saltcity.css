@@ -275,6 +275,7 @@ td{
 padding: 5px;
   text-align: center;
   border-left: solid 1px #ffffff;
+  border-bottom: solid 1px #ffffff;
   color: #ffffff;
 }
 
@@ -350,7 +351,7 @@ main ul{
 /*-----------------------------Coaches and Forums pages ------------------------------------- */
 
 .content{
-  width: 970px;
+  width: 80%;
   margin: auto;
   background: #363636;
   opacity: 0.9;

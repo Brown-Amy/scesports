@@ -7,14 +7,16 @@
         <table id="gamelist">
             <tr>
                 <th class="first">Name</th>
-                <th>&nbsp;</th>
-                <th>&nbsp;</th>
-             
+                <th>Edit Game</th>
+                <th>Delete Game</th>
+                <th>Assign Volunteer</th>
+
             </tr>
             <?php foreach ($games as $game) : ?>
             <tr>
                 <td class="first"><?php echo $game['name']; ?></td>
-                
+                </form></td>
+               
                 
                  <td><form action="." method="post">
                           <input type="hidden" name="action"
@@ -37,11 +39,19 @@
                   
                     <input type="submit" value="Delete">
                 </form></td>
+                <td><select name="parent">
+                            <option>Select a Parent</option>
+                            <?php foreach ($parents as $parent) : ?>
+                            
+                            <option value="<?php echo $parent['full_name']; ?>"><?php echo $parent['full_name']; ?></option>
+                            <?php endforeach; ?>
+                </select></td>
             </tr>
+            
             <?php endforeach; ?>
         </table>
         <p><a href="?action=add_game_form">Add Game</a></p>
-        <p><a href="?action=list_parents">View Parents</a></p>      
+            
     </section>
     </div>
 </main>

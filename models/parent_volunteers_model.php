@@ -1,13 +1,5 @@
 <?php
-function get_volunteers() {
-    global $db;
-    $query = 'SELECT * FROM parents_volunteers
-              ORDER BY `id`';
-    $statement = $db->prepare($query);
-    $statement->execute();
-    $volunteers = $statement->fetchAll();
-    return $volunteers;
-}
+
 function get_parent($id) {
     global $db;
     $query = 'SELECT * FROM parents
@@ -36,7 +28,8 @@ function get_parents() {
             parent.child_name as child_name,
             parent.mentor as mentor,
             parent.comment as comment,
-            game.name as game_name
+            game.name as game_name,
+            game.id as game_id
         FROM parents as parent
         JOIN games as game
         ON parent.game = game.id
@@ -102,5 +95,17 @@ function edit_parent($id, $first_name, $last_name, $email, $phone, $child_name, 
         $statement->execute();
         $statement->closeCursor();
 
+}
+function assign_game($parent_volunteer_id, $game_id){
+    global $db;
+    $query = 'INSERT INTO games_parents_volunteers
+                (game_id, parent_volunteer_id)
+              VALUES
+                (:game_id, :parent_volunteer_id)';
+    $statement = $db->prepare($query);
+    $statement->bindValue(':game_id', $game_id);
+    $statement->bindValue(':parent_volunteer_id', $parent_volunteer_id);
+    $statement->execute();
+    $statement->closeCursor();
 }
 ?>

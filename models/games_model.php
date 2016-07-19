@@ -40,4 +40,16 @@ function delete_game($id) {
     $statement->execute();
     $statement->closeCursor();
 }
+function assign_parent($id) {
+    global $db;
+    $query = 'INSERT INTO games_parents_volunteers
+                (game_id, parent_volunteer_id)
+              VALUES
+                (:game_id, :parent_volunteer_id)';
+    $statement = $db->prepare($query);
+    $statement->bindValue(':game_id', $game_id);
+    $statement->bindValue(':parent_volunteer_id', $parent_volunteer_id);
+    $statement->execute();
+    $statement->closeCursor();
+}
 ?>

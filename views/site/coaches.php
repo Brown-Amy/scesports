@@ -1,37 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8"/>
-	<title>Salt City e-sports | Coaches</title>
-	<link href="saltcity.css" type="text/css" rel="stylesheet" />
-	
-</head>
-<body id="page1">
-	<header>
-		<div class="center">
-			<a href="index.html"><img id="logo" src="images/scelogo.jpg" alt="Salt City logo" /></a>
-			<div id="column1">
-				<nav>
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li id="active"><a href="coaches.html">Coaches</a></li>
-					<li><a href="openplay.html">Open Play</a></li>
-					<li><a href="leagues.html">Leagues</a></li>
-					<li><a href="tournaments.html">Tournaments</a></li>
-					<li><a href="community.html">Forums</a></li>
-				</ul>
-				</nav>
-			</div>
-			<div id="column2">
-				<h5><a href="membership.html">Join us</a></h5>
-				<h5><a href="login.html">Login</a></h5>
-			</div>
-		</div>
-	</header>
-	
-
-
-	<main>
+<?php include('../views/layouts/header.php'); ?>
+<main>
 
 		<div class="content">
 			<h1>Coaches</h1>
@@ -40,7 +8,7 @@
 		
 			<div class="col1"><!--These columns divide up the images and the text on community/leagues/and coaches pages-->
 				<figure>
-				<img src="images/coach2.jpg" alt="Austin with cloud 9" />
+				<img src="../images/coach2.jpg" alt="Austin with cloud 9" />
 					<figcaption>Austin with Cloud 9</figcaption>
 				</figure>
 			</div>
@@ -48,12 +16,12 @@
 			<div class="col2">
 				<h4>Parent Volunteers</h4>
 				<p>Become a part of your child's growing experience. No experience required, we will help provide the game knowledge and practice tactics. This is the best way to learn with your child and influence the comradery and sportsmanship experience. Take advantage of all the great perks that come with volunteering. As a volunteer you receive discounted leagues, exclusive access to game film, play time credits, and a free VIP membership. Please <a href="contact.html" >email us</a> any questions or speak with a staff member in house.</p>
-				<img class="button" src="../images/register.png" alt="Register button" />
+				<a href= "/scesports/volunteer/index.php"><img class="button" src="../images/register.png" alt="Register button" /></a>
 			</div>
 			
 			<div class="col1">
 				<figure>
-				<img src="images/coach1.jpg" alt="Austin and Mateos" />
+				<img src="../images/coach1.jpg" alt="Austin and Mateos" />
 					<figcaption>Austin with Mateos</figcaption>
 				</figure>
 			</div>
@@ -64,27 +32,5 @@
 			</div>
 			
 		</div>
-
-
 	</main>
-	
-
-
-
-	<footer>
-		<div class="center">
-		<nav>
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="contact.html">Contact</a></li>
-				<li><a href="http://amybrown.herecomestheoxcart.com/practice/index.html">Practice</a></li>
-				<li><a href="styleguide/styleguide.html">Stylesheet</a></li>
-				<li><a href="about.html">About</a></li>
-			</ul>
-		</nav>
-		<p>Salt City e-sports &copy; 2016</p>
-		</div>
-	</footer>
-</body>
-
-</html>
+	<?php include('../views/layouts/footer.php');?>

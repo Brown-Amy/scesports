@@ -26,14 +26,12 @@
                     <input type="text" name="child_name" value="<?php echo $parent['child_name']; ?>">
                     <br>
                     
-                    <input type="checkbox" name="mentor" value="<?php echo $parent['mentor']; ?>"> I would like a staff mentor. <br>
+                    <input type="checkbox" name="mentor" checked="<?php $parent['mentor'] ? 'checked' : ''; ?>"> I would like to be a staff mentor. <br>
                     
-                    <label>Interested Games:</label>
+                    <label>Interested Game:</label>
                     <select name="game">
-                         
-                            <?php foreach ($games as $game) : ?>
-                
-                            <option value="<?php echo $game['id']; ?>"><?php echo $game['name']; ?></option>
+                    <?php foreach ($games as $game) : ?>
+                    <option value="<?php echo $game['id']; ?>" <?= $game['id']  == $parent['game'] ? 'selected' : '';?>><?php echo $game['name']; ?></option>
                             <?php endforeach; ?>
                     </select><br>
 

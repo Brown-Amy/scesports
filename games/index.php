@@ -28,6 +28,7 @@
     		} else {
 	        add_game($name);
 	        $games = get_games();
+	        $parents = get_parents();
 	        include ('../views/games/gamelist.php');
 	    	}
 	    break;
@@ -74,14 +75,19 @@
 		break;
 
 		case 'list_games':
+    		$parents = get_parents();
     		$games = get_games();
     		include ('../views/games/gamelist.php');
     	break;
+
+    	case 'assign_parent':
+    		$parents = get_parents();
+    		$games = get_games();
 		
 		default:
 			// query the table for all the games
 			$games = get_games();
-			print_r($games->fetchAll());
+			$parents = get_parents();
 			// load the games view
 			include('../views/games/gamelist.php');
 		break;
