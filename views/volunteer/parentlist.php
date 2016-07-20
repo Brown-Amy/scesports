@@ -74,7 +74,7 @@
             <?php endforeach; ?>
         </table>
         <p><a href="?action=add_parent_form">Add parent</a></p>
-
+        <p><a href="../games">Game List</a></p>
     </section>
     </div>
 </main>

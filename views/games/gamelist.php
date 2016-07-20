@@ -59,6 +59,7 @@
             
             <?php endforeach; ?>
         </table>
+        <p><a href="../volunteer?action=list_parents">Parent List</a></p>
         <p><a href="?action=add_game_form">Add Game</a></p>
             
     </section>

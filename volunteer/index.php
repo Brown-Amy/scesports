@@ -92,6 +92,7 @@
     		} else {
 	        edit_parent($id, $first_name, $last_name, $email, $phone, $child_name, $game, $mentor, $comment);
 	        $parents = get_parents();
+	        $games = get_games();
 	        include ('../views/volunteer/parentlist.php');
 	    	}
 

@@ -108,4 +108,17 @@ function assign_game($parent_volunteer_id, $game_id){
     $statement->execute();
     $statement->closeCursor();
 }
+
+function get_mentors(){
+    global $db;
+    $query = 'SELECT id, mentor FROM parents;';
+    $statement = $db->prepare($query);
+    $statement->bindValue(":id", $id);
+    $statement->bindValue(":mentor", $mentor);
+    $statement->execute();
+    $parent = $statement->fetchAll();
+    $statement->closeCursor();
+    return $mentors;
+
+}
 ?>

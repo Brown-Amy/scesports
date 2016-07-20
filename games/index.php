@@ -92,6 +92,8 @@
             assign_parent($parent_volunteer_id, $game_id);
             $parents = get_parents();
             $games = get_games();
+            echo $parent_volunteer_id;
+            echo $game_id;
             include ('../views/games/gamelist.php');
             }
 		
