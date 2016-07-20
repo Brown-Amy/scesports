@@ -1,6 +1,6 @@
 <?php include '../views/layouts/header.php'; ?>
 <main>
-   <div class="content"
+   <div class="content">
     <section>
         <!-- display a table of games -->
         <h1>Games</h1>
@@ -14,10 +14,7 @@
             </tr>
             <?php foreach ($games as $game) : ?>
             <tr>
-                <td class="first"><?php echo $game['name']; ?></td>
-                </form></td>
-               
-                
+                <td class="first"><?php echo $game['name']; ?></td> 
                  <td><form action="." method="post">
                           <input type="hidden" name="action"
                            value="show_edit_form">
@@ -45,7 +42,9 @@
                             
                             <option value="<?php echo $parent['full_name']; ?>"><?php echo $parent['full_name']; ?></option>
                             <?php endforeach; ?>
-                    <form action="." method="post">
+                    
+                </select>
+                <form action="." method="post">
                     <input type="hidden" name="action"
                            value="assign_parent">
                     <input type="hidden" name="parent_id"
@@ -53,8 +52,7 @@
                     <input type="hidden" name="game_id"
                            value="<?php echo $game['id']; 'selected' ?>">       
                     <input type="submit" value="Assign">
-                    </form>
-                </select></td>
+                </form></td>
             </tr>
             
             <?php endforeach; ?>
